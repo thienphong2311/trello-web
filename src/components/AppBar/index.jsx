@@ -12,6 +12,7 @@ import { Badge, Button, TextField, Tooltip } from '@mui/material'
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import Profiles from './Menus/Profiles'
+import AddToPhotosIcon from '@mui/icons-material/AddToPhotos'
 
 function AppBar() {
   return (
@@ -36,7 +37,7 @@ function AppBar() {
           <Recent />
           <Starred />
           <Templates />
-          <Button variant="outlined">Create</Button>
+          <Button variant="outlined" startIcon={<AddToPhotosIcon />}>Create</Button>
         </Box>
 
       </Box>

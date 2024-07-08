@@ -29,7 +29,7 @@ function Profiles() {
           aria-expanded={open ? 'true' : undefined}
         >
           <Avatar
-            sx={{ width: 30, height: 30 }}
+            sx={{ width: 34, height: 34 }}
             alt='Thiên Phong'
             src='https://lh3.googleusercontent.com/a/ACg8ocJgicmMjuLTTu-fJUPW8pgJ35CTR8Tlpc6-8CC6nzAmEMpCjH29=s360-c-no'
           />
