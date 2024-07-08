@@ -1,11 +1,10 @@
 import { Experimental_CssVarsProvider as CssVarsProvider, experimental_extendTheme } from '@mui/material/styles'
 import { cyan, deepOrange, orange, teal } from '@mui/material/colors'
-import { BorderColor } from '@mui/icons-material'
 
 // Create a theme instance.
 const theme = experimental_extendTheme({
   trelloCustom: {
-    appBarHeight: '48px',
+    appBarHeight: '60px',
     boardBarHeight: '58px'
   },
   colorSchemes: {
@@ -27,6 +26,22 @@ const theme = experimental_extendTheme({
     }
   },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          '*::-webkit-scrollbar': {
+            width: '8px',
+            height: '8px'
+          },
+          '*::-webkit-scrollbar-thumb': {
+            backgroundColor: '#bdc3c7'
+          },
+          '*::-webkit-scrollbar-thumb:hover': {
+            backgroundColor: '#00b894'
+          }
+        }
+      }
+    },
     MuiButton: {
       styleOverrides: {
         root: {
