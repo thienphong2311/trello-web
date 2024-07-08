@@ -9,8 +9,8 @@ import Recent from './Menus/recent'
 import Starred from './Menus/Starred'
 import Templates from './Menus/Templates'
 import { Badge, Button, TextField, Tooltip } from '@mui/material'
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone'
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
 import Profiles from './Menus/Profiles'
 
 function AppBar() {
@@ -20,7 +20,9 @@ function AppBar() {
       height: (theme) => theme.trelloCustom.appBarHeight,
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'space-between'
+      justifyContent: 'space-between',
+      gap: 2,
+      overflowX: 'auto'
     }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
         <AppsIcon sx={{ color: 'primary.main' }}/>
@@ -28,14 +30,18 @@ function AppBar() {
           <SvgIcon component={TrelloIcon} inheritViewBox sx={{ color: 'primary.main' }} fontSize="small" />
           <Typography variant='span' sx={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'primary.main' }}>Trello</Typography>
         </Box>
-        <Workspace />
-        <Recent />
-        <Starred />
-        <Templates />
-        <Button variant="outlined">Create</Button>
+
+        <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 1 }}>
+          <Workspace />
+          <Recent />
+          <Starred />
+          <Templates />
+          <Button variant="outlined">Create</Button>
+        </Box>
+
       </Box>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-        <TextField id="outlined-search" label="Search..." type="search" size='small'/>
+        <TextField id="outlined-search" label="Search..." type="search" size='small' sx={{ minWidth: 120 }}/>
         <ModeSelect />
         <Tooltip title="Notification" sx={{ cursor: 'pointer' }}>
           <Badge color="secondary" variant="dot">
